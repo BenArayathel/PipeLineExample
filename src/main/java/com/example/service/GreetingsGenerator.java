@@ -22,6 +22,9 @@ public class GreetingsGenerator {
 			case 4: 
 				greetings = "Greetings!";
 				break;
+			case 5:
+				greetings = "Jenkins Hello!";
+				break;
 			default:
 				greetings = "Hello!?";
 		
