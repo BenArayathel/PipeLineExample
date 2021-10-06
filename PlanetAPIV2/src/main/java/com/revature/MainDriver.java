@@ -6,7 +6,7 @@ import io.javalin.Javalin;
 
 public class MainDriver {
 	
-	public static void main(String[ args) {
+	public static void main(String[] args) {
 		
 		Javalin app = Javalin.create(config -> config.addStaticFiles(
 				staticFiles ->
