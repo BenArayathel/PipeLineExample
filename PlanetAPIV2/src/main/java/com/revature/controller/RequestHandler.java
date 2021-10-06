@@ -31,7 +31,7 @@ public class RequestHandler {
 		final String LOGOUT = "/logout";
 		final String PLANET_PAGE = "/home";
 		final String FAILED_LOGIN = "/failedLogin";
-		final String ROOT_URL = "http://localhost:8000/login";
+		final String ROOT_URL = "http://ec2-52-14-64-228.us-east-2.compute.amazonaws.com:8000/Login.html";
 		
 		//REST operations API
 		//RESTful API is a program designed for another program
