@@ -1,9 +1,9 @@
 apiVersion: v1 # if in the core group, no need to add the group name
 kind: Pod # kind of Kubernetes object
 metadata: 
-  name: hello-pod
+  name: pipeline-pod
   labels:
-    app: hello-demo
+    app: pipeline-demo
 spec:
   # restartPolicy: Never
   containers:
