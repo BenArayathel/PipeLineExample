@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment{
         registry= 'barayathel/pipeline-example'
-        dockerHubCreds = 'dockerhub'
+        dockerHubCreds = 'dock-access'
         dockerImage =''
     }
     stages{
