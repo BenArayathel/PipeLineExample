@@ -33,9 +33,9 @@ pipeline{
 		stage("Deploy to production"){
             steps{
                 script{
-                    {
-                        sh 'kubectl version'
-                    }
+                    
+                    sh 'kubectl version'
+                    
                 }
             }
         }
