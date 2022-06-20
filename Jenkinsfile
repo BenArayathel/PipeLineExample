@@ -33,7 +33,7 @@ pipeline{
 		stage("Deploy to production"){
             steps{
                 script{
-                    withAWS(credentials: 'SRE aws credentials', region: 'us-east-1'){
+                    {
                         sh 'kubectl version'
                     }
                 }
