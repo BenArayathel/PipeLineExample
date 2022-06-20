@@ -37,7 +37,7 @@ pipeline{
                     try {
                         timeout(time: 1, unit: 'MINUTES'){
                             approved = input message: 'Deploy to production?', ok: 'Continue',
-                                parameters: [choice(name: 'approved', choices: 'Yes\No', description: 'Deploy this build to production')]
+                                parameters: [choice(name: 'approved', choices: 'Yes\nNo', description: 'Deploy this build to production')]
                             if(approved != 'Yes'){
                                 error('Build not approved')
                             }
