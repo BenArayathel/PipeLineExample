@@ -35,6 +35,7 @@ pipeline{
                 script{
                     
                     sh 'kubectl version'
+					sh 'kubectl apply -f pipeline-pod.yml'
                     
                 }
             }
