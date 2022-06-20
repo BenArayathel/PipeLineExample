@@ -33,10 +33,11 @@ pipeline{
 		stage("Deploy to production"){
             steps{
                 script{
-                    
-                    sh 'kubectl version'
-					sh 'kubectl apply -f pipeline-pod.yml'
-                    
+                    withAWS(credentials: 'SRE aws credentials'){
+                        sh 'aws eks update-kubeconfig --name ben-sre-1368'
+                        sh 'echo $registry:$currentBuild.number"
+                        sh "kubectl set image -n ben-space deployment/pipeline-deployment micrometer-demo-deploymen$registry:$currentBuild.number"
+                    }
                 }
             }
         }
