@@ -6,13 +6,7 @@ pipeline{
         dockerImage =''
     }
     stages{
-        stage("Maven clean package"){
-            steps{
-                sh 'echo $M2_HOME'
-                sh 'echo $PATH'
-                sh '/usr/local/apache-maven/bin/mvn clean package'
-            }
-        }
+        
         stage("Docker build"){
             steps{
                 script{
