@@ -35,7 +35,7 @@ pipeline{
                 script{
   
                     sh 'echo $registry:$currentBuild.number'
-                    sh "kubectl set image -n ben-space deployment/micro-deployment micrometer-demo-deploymen$registry:$currentBuild.number"
+                    sh "kubectl set image -n ben-space deployment/micro-deployment micrometer-demo-deployment=$registry:$currentBuild.number"
               
                 }
             }
